@@ -1,17 +1,32 @@
 //@ts-check
 
+const currentScript = document.currentScript;
+const dataset = currentScript ? currentScript.dataset : {};
+
+const { env } = dataset
+
+
+const mfBundleUrl = (env === 'production')
+? '/module-federation-examples/mf-bundle.js'
+: 'http://localhost:3000/mf-bundle.js';
+
 /**
  * @type {{default: typeof import('@module-federation/enhanced/runtime')}}
  * 
  */
-// @ts-expect-error
-const { default: {createInstance}}= await import('http://localhost:3000/mf-bundle.js')
+const { default: { createInstance } } = await import(mfBundleUrl)
+
+
+
+const entry = env === 'production'
+  ? '/module-federation-examples/provider/mf-manifest.json'
+  : 'http://localhost:3001/mf-manifest.json';
 
 const mfInstance = createInstance({
     name: 'consumer',
     remotes: [
         {
-            entry: 'http://localhost:3001/mf-manifest.json',
+            entry,
             name: 'modal',
             alias: 'modal',
         }
