@@ -1,6 +1,7 @@
 //@ts-check
 
 const currentScript = document.currentScript ?? document.head.querySelector('script');
+console.log(currentScript)
 const dataset = currentScript ? currentScript.dataset : {};
 
 const { env } = dataset
