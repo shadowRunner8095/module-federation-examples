@@ -11,7 +11,5 @@ export default createModuleFederationConfig({
     react: { singleton: true },
     'react-dom': { singleton: true },
   },
-  getPublicPath: `function(){ return '${isProduction
-    ? '/module-federation-examples/provider/'
-    : 'http://localhost:3001/'}'}`,
+  getPublicPath: `function(){ return '${isProduction ? '/module-federation-examples/provider/': 'http://localhost:3001/'}'}`,
 });
