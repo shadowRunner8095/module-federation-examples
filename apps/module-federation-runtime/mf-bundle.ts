@@ -1,0 +1,1 @@
+export * as default from '@module-federation/enhanced/runtime'

@@ -1,0 +1,17 @@
+{
+  "name": "provider",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview",
+    "start": "pnpm dev"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.2.15",
+    "typescript": "^5.7.2",
+    "@module-federation/rsbuild-plugin":"^0.18.1"
+  }
+}

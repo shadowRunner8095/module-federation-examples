@@ -1,0 +1,21 @@
+{
+  "name": "module-federation-runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild mf-bundle.ts --bundle --format=esm --outdir=../../dist",
+    "start": "pnpm build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "esbuild": "^0.25.8"
+  },
+  "dependencies": {
+    "@module-federation/enhanced": "^0.18.1"
+  }
+}
