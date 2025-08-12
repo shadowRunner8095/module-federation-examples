@@ -29,6 +29,11 @@ jobs:
         env:
           BUILD_ENV: production
         run: pnpm build
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     needs: build
