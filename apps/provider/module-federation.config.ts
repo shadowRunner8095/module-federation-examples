@@ -13,5 +13,5 @@ export default createModuleFederationConfig({
   },
   getPublicPath: `function(){ return '${isProduction
     ? '/module-federation-examples/provider/'
-    : 'http://localhost:3001/'}}'`,
+    : 'http://localhost:3001/'}'}`,
 });
